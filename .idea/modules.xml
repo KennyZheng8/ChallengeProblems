@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Coin Change/Coin Change.iml" filepath="$PROJECT_DIR$/Coin Change/Coin Change.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Personal Testing Projects.iml" filepath="$PROJECT_DIR$/Personal Testing Projects.iml" />
+    </modules>
+  </component>
+</project>
