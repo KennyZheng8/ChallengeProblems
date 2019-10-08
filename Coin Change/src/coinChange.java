@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class coinChange {
 
     public static void main(String[] args) {
@@ -29,18 +31,23 @@ public class coinChange {
             return cents;
         }
 
-        int[] ary = new int[]{25, 10, 1};
+        int[] coins = new int[]{25, 10, 1};
         int[] table = new int[cents + 1];
-        table[0] = 0;
         int ans = 0;
 
-        for (int i = 0; i < table.length; i++) {
-            for (int j = 0; j < ary.length; j++) {
+        table[0] = 0;
+        for (int i = 1; i < table.length; i++) {
+            table[i] = cents;
+        }
 
+        for (int i = 1; i < table.length; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (i >= coins[j]) {
+                    table[i] = Math.min((table[i - coins[j]] + 1), table[i]);
+                }
             }
         }
 
-
-        return ans;
+        return table[cents];
     }
 }
