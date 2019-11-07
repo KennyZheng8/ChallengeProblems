@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class coinChange {
 
     public static void main(String[] args) {
 
-        System.out.println(numCoins(34));
+        //System.out.println(numCoins(34));
         System.out.println(numCoinsDP(31));
     }
 
@@ -31,15 +33,22 @@ public class coinChange {
 
         int[] ary = new int[]{25, 10, 1};
         int[] table = new int[cents + 1];
-        table[0] = 0;
         int ans = 0;
 
-        for (int i = 0; i < table.length; i++) {
-            for (int j = 0; j < ary.length; j++) {
+        table[0] = 0;
+        for (int i = 1; i < table.length; i++) {
+            table[i] = cents;
+        }
 
+        for (int i = 1; i < table.length; i++) {
+            for (int j = 0; j < ary.length; j++) {
+                if (cents <= ary[j]) {
+                    table[i] = Math.min(i - ary[j], table[i]);
+                }
             }
         }
 
+        System.out.println(Arrays.toString(table));
 
         return ans;
     }
