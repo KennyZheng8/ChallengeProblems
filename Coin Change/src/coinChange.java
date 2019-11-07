@@ -31,7 +31,7 @@ public class coinChange {
             return cents;
         }
 
-        int[] ary = new int[]{25, 10, 1};
+        int[] coins = new int[]{25, 10, 1};
         int[] table = new int[cents + 1];
         int ans = 0;
 
@@ -41,15 +41,25 @@ public class coinChange {
         }
 
         for (int i = 1; i < table.length; i++) {
+<<<<<<< HEAD
             for (int j = 0; j < ary.length; j++) {
                 if (cents <= ary[j]) {
                     table[i] = Math.min(i - ary[j], table[i]);
+=======
+            for (int j = 0; j < coins.length; j++) {
+                if (i >= coins[j]) {
+                    table[i] = Math.min((table[i - coins[j]] + 1), table[i]);
+>>>>>>> 5317335e002b185b050008b7363a6b88aaa017a7
                 }
             }
         }
 
+<<<<<<< HEAD
         System.out.println(Arrays.toString(table));
 
         return ans;
+=======
+        return table[cents];
+>>>>>>> 5317335e002b185b050008b7363a6b88aaa017a7
     }
 }

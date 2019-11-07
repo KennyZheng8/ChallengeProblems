@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Coin Change/Coin Change.iml" filepath="$PROJECT_DIR$/Coin Change/Coin Change.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Personal Testing Projects.iml" filepath="$PROJECT_DIR$/Personal Testing Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fibonacci/Fibonacci.iml" filepath="$PROJECT_DIR$/Fibonacci/Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Problems.iml" filepath="$PROJECT_DIR$/Problems.iml" />
     </modules>
   </component>
 </project>
