@@ -4,7 +4,7 @@ public class coinChange {
 
     public static void main(String[] args) {
 
-        System.out.println(numCoins(34));
+        //System.out.println(numCoins(34));
         System.out.println(numCoinsDP(31));
     }
 
@@ -47,7 +47,6 @@ public class coinChange {
                 }
             }
         }
-
         return table[cents];
     }
 }
